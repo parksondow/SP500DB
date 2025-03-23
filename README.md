@@ -22,7 +22,7 @@ pip install beautifulsoup4
 
 1. 執行程式：
    ```bash
-   python Claude500_250321b.py
+   python.exe SP500_StkBase.py
    ```
 
 2. 選擇更新模式：
