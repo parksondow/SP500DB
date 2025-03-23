@@ -1,15 +1,17 @@
-# S&P 500 股票數據下載工具
+[中文版 README](README.zh-TW.md)
 
-這是一個用於下載和管理 S&P 500 成分股歷史數據的 Python 程式。
+# S&P 500 Stock Data Download Tool
 
-## 功能特點
+This is a Python script used for downloading and managing historical data of S&P 500 component stocks.
 
-- 自動從維基百科抓取最新的 S&P 500 成分股列表
-- 支援增量更新和完整重新下載兩種模式
-- 將數據同時保存為 CSV 文件和 SQLite 數據庫
-- 內建錯誤處理和進度顯示
+## Features
 
-## 安裝需求
+- Automatically fetches the latest list of S&P 500 component stocks from Wikipedia
+- Supports both incremental update and full re-download modes
+- Saves data simultaneously as CSV files and SQLite database
+- Built-in error handling and progress display
+
+## Installation Requirements
 
 ```bash
 pip install pandas
@@ -18,44 +20,47 @@ pip install requests
 pip install beautifulsoup4
 ```
 
-## 使用方法
+## Usage
 
-1. 執行程式：
+1. Run the script:
+   
    ```bash
    python.exe SP500_StkBase.py
    ```
 
-2. 選擇更新模式：
-   - 1: 增量更新（從上次更新日期到今天）
-   - 2: 完整重新下載（從 2023 年開始）
-   - 3: 退出程式
+2. Choose the update mode:
+   
+   - 1: Incremental update (from the last update date to today)
+   - 2: Full re-download (from 2023 onwards)
+   - 3: Exit the script
 
-## 數據存儲
+## Data Storage
 
-- CSV 文件：儲存在 `Stk_data` 目錄下
-- SQLite 數據庫：`sp500_stock_data.db`
+- CSV files: Stored in the `Stk_data` directory
+- SQLite database: `sp500_stock_data.db`
 
-## 數據庫結構
+## Database Structure
 
-stock_prices 表格包含以下欄位：
-- ticker: 股票代碼
-- date: 交易日期
-- open: 開盤價
-- high: 最高價
-- low: 最低價
-- close: 收盤價
-- volume: 成交量
+The `stock_prices` table contains the following fields:
 
-## 注意事項
+- ticker: Stock symbol
+- date: Trading date
+- open: Opening price
+- high: Highest price
+- low: Lowest price
+- close: Closing price
+- volume: Trading volume
 
-- 程式會自動控制 API 請求頻率，避免超過限制
-- 完整重新下載會刪除所有現有數據
-- 建議定期執行增量更新以維持數據最新
+## Notes
 
-## 作者
+- The script automatically controls the API request frequency to avoid exceeding limits
+- A full re-download will delete all existing data
+- It is recommended to perform incremental updates regularly to keep the data up-to-date
+
+## Author
 
 [Parkson Dow]
 
-## 授權
+## License
 
 MIT License
